@@ -61,6 +61,32 @@ class LinkedList {
         currentElt.next = newNode;
     }
 
+    //Get at index
+    getValueAtIndex(index) {
+        let currentElt = this.head;
+        let count = 0;
+        if (!this.head) {
+            console.log("your linked list is empty");
+        } else if (index === 0 && this.head != null) {
+            console.log(this.head.value);
+        } else {
+            while (count < index) {
+                currentElt = currentElt.next;
+                count++;
+            }
+            console.log(`Your value at index ${index} is : ${currentElt.value}`);
+        }
+    }
+    //CLear List
+
+    //Delete specific element with it's index
+
+    //deleteTail
+
+    //deleteHead
+
+    //
+
     printDatasList() {
         let current = this.head;
         while (current) {
@@ -72,12 +98,13 @@ class LinkedList {
 }
 
 const ourTest = new LinkedList();
-ourTest.append(60);
-ourTest.append(170);
-ourTest.append(36);
-ourTest.append(129);
-ourTest.prepend(39);
+// ourTest.append(60);
+// ourTest.append(170);
+// ourTest.append(36);
+// ourTest.append(129);
+// ourTest.prepend(39);
 // console.log(ourTest.checkLinkedListSize());
-ourTest.insertAtSpecificIndex(3, 504);
+// ourTest.insertAtSpecificIndex(3, 504);
 
-ourTest.printDatasList();
+// ourTest.printDatasList();
+ourTest.getValueAtIndex(2);
