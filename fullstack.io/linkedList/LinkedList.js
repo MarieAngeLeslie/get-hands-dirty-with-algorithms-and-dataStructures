@@ -121,7 +121,17 @@ class LinkedList {
     //CLear List
 
     //deleteTail
-
+    deleteTail() {
+        let currentElt = this.head;
+        while (currentElt) {
+            if (currentElt.next.next === null) {
+                currentElt.next = null;
+                break;
+            } else {
+                currentElt = currentElt.next;
+            }
+        }
+    }
     //deleteHead
     deleteHead() {
         if (this.head) {
@@ -161,5 +171,6 @@ ourTest.append(129);
 // ourTest.deleteElmentAtIndex(2);
 // console.log("Après suppression");
 ourTest.printDatasList();
-ourTest.deleteHead();
+ourTest.deleteTail();
+console.log("Tail removed");
 ourTest.printDatasList();
