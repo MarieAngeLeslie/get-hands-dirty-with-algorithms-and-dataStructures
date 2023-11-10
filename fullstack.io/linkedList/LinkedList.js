@@ -109,6 +109,7 @@ class LinkedList {
                     count++;
                 }
                 deletedNode = currentElt.next;
+                console.log(`L'élément supprimé est : ${deletedNode.value}`);
                 previousElt = currentElt;
                 previousElt.next = currentElt.next.next;
             }
@@ -122,7 +123,17 @@ class LinkedList {
     //deleteTail
 
     //deleteHead
-
+    deleteHead() {
+        if (this.head) {
+            if (this.checkLinkedListSize() === 1) {
+                console.log(`Warning vous allez supprimer le seul noeud votre liste chaînée`);
+            } else {
+                this.head = this.head.next;
+            }
+        } else {
+            return null;
+        }
+    }
 
 
     printDatasList() {
@@ -145,8 +156,10 @@ ourTest.append(129);
 // ourTest.insertAtSpecificIndex(3, 504);
 
 // ourTest.getValueAtIndex(2);
+// ourTest.printDatasList();
+// console.log(ourTest.checkLinkedListSize());
+// ourTest.deleteElmentAtIndex(2);
+// console.log("Après suppression");
 ourTest.printDatasList();
-console.log(ourTest.checkLinkedListSize());
-ourTest.deleteElmentAtIndex(4);
-console.log("Après suppression");
+ourTest.deleteHead();
 ourTest.printDatasList();
