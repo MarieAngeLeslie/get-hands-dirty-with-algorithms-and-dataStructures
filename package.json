@@ -1,0 +1,11 @@
+{
+  "name": "get-hands-dirty-with-dsa",
+  "version": "1.0.0",
+  "description": "level Up in DataStructure and Algorithm",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "amald AÏKPE",
+  "license": "ISC"
+}
