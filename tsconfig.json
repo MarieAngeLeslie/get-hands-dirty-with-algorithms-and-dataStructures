@@ -8,5 +8,6 @@
     "files": [
         "src/app.ts",
         "src/recursion/tower-of-hanoi.ts",
+        "src/recursion/sorted-array.ts",
     ]
 }

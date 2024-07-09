@@ -1,15 +1,11 @@
 "use strict";
-function towersOfHanoi(n, frompeg, topeg, auxpeg) {
-    // If only 1 disk, make the move and return
+function towerOfHanoi(n, frompeg, topeg, aux) {
     if (n == 1) {
-        console.log(`\nMove disk 1 from peg ${frompeg} to peg ${topeg}`);
+        console.log(`Move disk 1 from ${frompeg} to ${topeg}`);
         return;
     }
-    // Move top n-1 disks from A to B, using C as auxiliary
-    towersOfHanoi(n - 1, frompeg, auxpeg, topeg);
-    // Move remaining disks from A to C
-    console.log(`\nMove disk ${n} from peg ${frompeg} to peg ${topeg}`);
-    // Move n-1 disks from B to C using A as auxiliary
-    towersOfHanoi(n - 1, auxpeg, topeg, frompeg);
+    towerOfHanoi(n - 1, frompeg, aux, topeg);
+    console.log(`Move disk ${n} from ${frompeg} to ${topeg}`);
+    towerOfHanoi(n - 1, aux, topeg, frompeg);
 }
-towersOfHanoi(3, 'A', 'B', 'C');
+towerOfHanoi(3, 'A', 'B', 'C');
