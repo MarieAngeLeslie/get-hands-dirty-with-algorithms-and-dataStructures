@@ -2,12 +2,11 @@
     "compilerOptions": {
         "outDir": "./dist",
         "target": "ES2021",
+        "module": "CommonJS",
         "noEmitOnError": false,
         "strict": true
     },
-    "files": [
-        "src/app.ts",
-        "src/recursion/tower-of-hanoi.ts",
-        "src/recursion/sorted-array.ts",
+    "include": [
+        "src/**/*.ts"
     ]
 }
