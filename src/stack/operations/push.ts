@@ -9,3 +9,10 @@ export function push(linkedListHead: ListNode | null, newStackElement: number) {
     temp.next = linkedListHead;
     return temp
 }
+
+
+export function pop(stack: ListNode) {
+    let temp = stack;
+    let newStack = stack.next;
+    return { newStack, poppedElement: temp }
+}
