@@ -22,4 +22,3 @@ export function findNthNodeFromEnd(linkedList: ListNode | null, nth_element: num
     return null
 }
 
-
