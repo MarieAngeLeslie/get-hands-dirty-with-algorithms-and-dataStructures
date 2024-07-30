@@ -16,3 +16,9 @@ export function pop(stack: ListNode) {
     let newStack = stack.next;
     return { newStack, poppedElement: temp }
 }
+
+//is Empty stack
+export function isEmpty(linkedListHead: ListNode) {
+    if(!linkedListHead)
+        return true
+}
